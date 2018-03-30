@@ -122,7 +122,7 @@ def launch_tensorboard(bin_dir="/tmp", log_dir="/tmp", retval=False):
 
   if not is_tensorboard_running:
     get_ipython().system_raw(
-        'tensorboard --logdir {} --host 0.0.0.0 --port 6006 &'
+        'tensorboard --logdir {} --host 0.0.0.0 --port 6006 --debugger_port 6064 &'
         .format(log_dir)
     )
     is_tensorboard_running = True
